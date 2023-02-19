@@ -25,7 +25,7 @@ import "assets/scss/argon-dashboard-react.scss";
 
 import AdminLayout from "layouts/Admin.js";
 import AuthLayout from "layouts/Auth.js";
-
+import "assets/scss/custom.scss";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>

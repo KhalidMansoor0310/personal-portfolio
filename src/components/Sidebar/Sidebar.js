@@ -104,37 +104,25 @@ const Sidebar = (props) => {
 
   return (
     <Navbar
-      className="navbar-vertical fixed-left navbar-light bg-white"
+      className="navbar-vertical fixed-left   bg-gradient-default"
       expand="md"
       id="sidenav-main"
     >
       <Container fluid>
         {/* Toggler */}
         <button
-          className="navbar-toggler"
+          className="navbar-toggler "
           type="button"
           onClick={toggleCollapse}
         >
-          <span className="navbar-toggler-icon" />
+          <i className="ni ni-bullet-list-67 text-white"></i>
         </button>
-        {/* Brand */}
-        {logo ? (
-          <NavbarBrand className="pt-0" {...navbarBrandProps}>
-            <img
-              alt="..."
-              className="rounded-circle"
-              src={require("../../assets/img/theme/team-4-800x800.jpg").default}
-            />
-          </NavbarBrand>
-        ) : null}
-        {/* User */}
 
-        {/* Collapse */}
         <Collapse navbar isOpen={collapseOpen}>
           {/* Collapse header */}
           <div className="navbar-collapse-header d-md-none">
             <Row>
-              {logo ? (
+              {/* {logo ? (
                 <Col className="collapse-brand" xs="6">
                   {logo.innerLink ? (
                     <Link to={logo.innerLink}>
@@ -146,8 +134,8 @@ const Sidebar = (props) => {
                     </a>
                   )}
                 </Col>
-              ) : null}
-              <Col className="collapse-close" xs="6">
+              ) : null} */}
+              <Col className="collapse-close">
                 <button
                   className="navbar-toggler"
                   type="button"
@@ -159,7 +147,6 @@ const Sidebar = (props) => {
               </Col>
             </Row>
           </div>
-
           <Nav navbar>{createLinks(routes)}</Nav>
         </Collapse>
       </Container>

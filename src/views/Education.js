@@ -14,27 +14,30 @@ import { education } from "helpers/Contants";
 const Education = () => {
   return (
     <>
-      <VerticalTimeline>
-        {education?.map((item) => {
-          return (
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{}}
-              contentArrowStyle={{
-                borderRight: "7px solid  rgb(33, 150, 243)",
-              }}
-              date={item?.dates}
-              iconStyle={{ background: "rgb(27, 17, 69)", color: "#fff" }}
-            >
-              <h3 className="vertical-timeline-element-title">{item.degree}</h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                {item?.school}
-              </h4>
-              <p className="text-success">{item?.grades}</p>
-            </VerticalTimelineElement>
-          );
-        })}
-      </VerticalTimeline>
+      <Container className="bg-gradient-default p-3">
+        <VerticalTimeline>
+          {education?.map((item) => {
+            return (
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work "
+                contentArrowStyle={{
+                  borderRight: "7px solid  rgb(33, 150, 243)",
+                }}
+                date={item?.dates}
+                iconStyle={{ background: "rgb(27, 17, 69)", color: "#fff" }}
+              >
+                <h3 className="vertical-timeline-element-title ">
+                  {item.degree}
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  {item?.school}
+                </h4>
+                <p className="text-success">{item?.grades}</p>
+              </VerticalTimelineElement>
+            );
+          })}
+        </VerticalTimeline>
+      </Container>
     </>
   );
 };
